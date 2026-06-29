@@ -1,0 +1,59 @@
+.produto-card {
+    width: 270px;
+    height: 450px; /* altura fixa */
+    background: #111;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+
+.produto-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.card-body{
+    color:white;
+    background:#111;
+    padding:18px;
+}
+
+.card-title{
+    font-size:1.1rem;
+    font-weight:bold;
+
+    min-height: 40px; 
+}
+
+.card-text{
+    color:#ccc;
+    min-height: 25px; 
+}
+
+.preco{
+    color:#FFD700;
+    font-size:1.4rem;
+    font-weight:bold;
+    margin-top: auto; 
+}
+
+.btn-dourado{
+    width:100%;
+    background:linear-gradient(135deg,#FFD700,#C9A227);
+    border:none;
+    color:black;
+    font-weight:bold;
+}
+
+.btn-dourado:hover{
+    color:white;
+}

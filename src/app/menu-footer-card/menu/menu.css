@@ -1,0 +1,17 @@
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    border-bottom: 2px solid white;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: black;
+}

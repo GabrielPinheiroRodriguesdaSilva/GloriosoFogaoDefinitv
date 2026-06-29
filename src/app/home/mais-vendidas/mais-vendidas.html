@@ -1,0 +1,31 @@
+<div class="container my-5">
+
+    <h2 class=" text-white mb-5">
+        Mais Vendidos
+    </h2>
+
+    <div class="row justify-content-center g-4">
+
+        @for(produto of produtos; track produto.produtoId){
+
+        <div class="col-auto">
+
+            <app-card
+
+                [nome]="produto.produtoNome"
+
+                [descricao]="produto.produtoDescricao"
+
+                [preco]="produto.produtoPreco"
+
+                [imagem]="produto.produtoImagem">
+
+            </app-card>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>

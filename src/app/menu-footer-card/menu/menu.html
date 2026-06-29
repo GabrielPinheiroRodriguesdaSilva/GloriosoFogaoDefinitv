@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow">
+  <div class="container">
+
+    <!-- Logo -->
+    <a routerLink="/" class="navbar-brand">
+  <img
+    src="/img/Logo.png"
+    alt="Logo do Glorioso Fogão"
+    width="60"
+    height="60">
+</a>
+
+    <!-- Botão Mobile -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/camisas">Camisas</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/acessorios">Acessórios</a>
+      </li>
+
+      </ul>
+
+      <!-- Pesquisa -->
+      <form class="d-flex me-3">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Pesquisar produtos...">
+
+        <button class="btn btn-light" type="submit">
+          Buscar
+        </button>
+      </form>
+
+      <!-- Carrinho -->
+      <button class="btn btn-outline-light">
+        🛒 Carrinho
+      </button>
+
+    </div>
+
+  </div>
+</nav>
