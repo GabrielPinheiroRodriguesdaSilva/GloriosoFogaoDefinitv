@@ -3,12 +3,12 @@
 
     <!-- Logo -->
     <a routerLink="/" class="navbar-brand">
-  <img
-    src="/img/Logo.png"
-    alt="Logo do Glorioso Fogão"
-    width="60"
-    height="60">
-</a>
+      <img
+        src="/img/Logo.png"
+        alt="Logo do Glorioso Fogão"
+        width="60"
+        height="60">
+    </a>
 
     <!-- Botão Mobile -->
     <button
@@ -18,6 +18,7 @@
       data-bs-target="#navbarNav">
 
       <span class="navbar-toggler-icon"></span>
+
     </button>
 
     <!-- Menu -->
@@ -26,16 +27,16 @@
       <ul class="navbar-nav mx-auto">
 
         <li class="nav-item">
-        <a class="nav-link" routerLink="/">Home</a>
-      </li>
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/camisas">Camisas</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/camisas">Camisas</a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/acessorios">Acessórios</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acessorios">Acessórios</a>
+        </li>
 
       </ul>
 
@@ -51,10 +52,58 @@
         </button>
       </form>
 
+      <!-- Login -->
+      <a
+        *ngIf="!usuario"
+        routerLink="/login"
+        class="btn btn-outline-light d-flex align-items-center gap-2 me-3">
+
+        <i class="bi bi-person-fill"></i>
+        Login
+
+      </a>
+
+      <!-- Usuário Logado -->
+      <div
+        *ngIf="usuario"
+        class="dropdown me-3">
+
+        <button
+          class="btn btn-outline-light dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown">
+
+          <i class="bi bi-person-fill"></i>
+          {{ usuario.clienteNome }}
+
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end">
+
+          <li>
+            <button
+              class="dropdown-item text-danger"
+              (click)="sair()">
+
+              <i class="bi bi-box-arrow-right"></i>
+              Sair
+
+            </button>
+          </li>
+
+        </ul>
+
+      </div>
+
       <!-- Carrinho -->
-      <button class="btn btn-outline-light">
-        🛒 Carrinho
-      </button>
+      <a
+        routerLink="/carrinho"
+        class="btn btn-outline-light d-flex align-items-center gap-2">
+
+        <i class="bi bi-cart"></i>
+        Carrinho
+
+      </a>
 
     </div>
 

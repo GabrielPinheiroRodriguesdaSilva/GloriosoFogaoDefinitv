@@ -1,0 +1,75 @@
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Meu Carrinho
+    </h2>
+
+    <div *ngIf="produtos.length === 0" class="alert alert-warning">
+
+        Seu carrinho está vazio.
+
+    </div>
+
+    <div
+        class="card mb-3"
+        *ngFor="let produto of produtos; let i = index">
+
+        <div class="row g-0">
+
+            <div class="col-md-3">
+
+                <img
+                    [src]="produto.imagem"
+                    class="img-fluid rounded-start">
+
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="card-body">
+
+                    <h5>{{ produto.nome }}</h5>
+
+                    <p>{{ produto.descricao }}</p>
+
+                    <h4 class="text-success">
+
+                        R$ {{ produto.preco }}
+
+                    </h4>
+
+                    <button
+                        class="btn btn-danger"
+                        (click)="remover(i)">
+
+                        Remover
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="text-end mt-4"
+        *ngIf="produtos.length > 0">
+
+        <h3>
+
+            Total: R$ {{ total }}
+
+        </h3>
+
+        <button class="btn btn-success btn-lg">
+
+            Finalizar Compra
+
+        </button>
+
+    </div>
+
+</div>
